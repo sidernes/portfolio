@@ -41,7 +41,7 @@ const Tecnologies = () => {
 			className="py-6"
 		>
 			<div className="container mx-auto">
-				<div className="flex flex-col xl:flex-row gap-[30px] mb-6">
+				<div className="flex flex-col xl:flex-row gap-[30px] mb-10">
 					<p>
 						En el mundo del desarrollo de software, dominar una amplia gama de
 						tecnologías es crucial para crear soluciones eficientes y efectivas.
@@ -54,7 +54,10 @@ const Tecnologies = () => {
 						{skills.map(({ icon, title }) => {
 							const IconComponent = getIconComponent(icon);
 							return (
-								<li key={title} class="li-skills">
+								<li
+									key={title}
+									className="flex flex-col items-center justify-center"
+								>
 									{IconComponent && (
 										<IconComponent
 											style={{
@@ -64,7 +67,7 @@ const Tecnologies = () => {
 											}}
 										/>
 									)}
-									<p class="p-skill">{title}</p>
+									<p className="mt-4 text-sm">{title}</p>
 								</li>
 							);
 						})}

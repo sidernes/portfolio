@@ -81,8 +81,8 @@ const Contact = () => {
 							<Button size="md">
 								<Link
 									href="https://wa.me/+50377223100"
+									passHref
 									target="_blank"
-									class="a-action"
 								>
 									Enviar mensaje whatsapp
 								</Link>

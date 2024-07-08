@@ -52,17 +52,33 @@ const projects = [
 		live: "",
 		github: "https://github.com/sidernes/teslo-shop",
 	},
-	// {
-	// 	num: "03",
-	// 	category: "frontend",
-	// 	title: "project 3",
-	// 	description:
-	// 		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-	// 	stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-	// 	image: "/assets/work/thumb3.png",
-	// 	live: "",
-	// 	github: "",
-	// },
+	{
+		num: "03",
+		category: "frontend",
+		title: "project 3",
+		description:
+			"Portafolio personal desarrollado con Next.js, una plataforma para que los interesados puedan conocer más sobre mi trabajo.",
+		stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
+		image: "/assets/work/thumb3.webp",
+		live: "",
+		github: "https://github.com/sidernes/portfolio",
+	},
+	{
+		num: "04",
+		category: "full stack",
+		title: "project 3",
+		description:
+			"Proyecto full stack en PHP y Javascript vanilla para administración de vivienda en empresa dedicada a la comercialización de vivienda, control de estado de ventas, ubicaciones residenciales.",
+		stack: [
+			{ name: "PHP" },
+			{ name: "JS" },
+			{ name: "Bootstrap" },
+			{ name: "Leadflet" },
+		],
+		image: "/assets/work/thumb4.webp",
+		live: "",
+		github: "",
+	},
 ];
 
 const Work = () => {
@@ -94,7 +110,7 @@ const Work = () => {
 							</div>
 							{/* project category */}
 							<h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-								{project.category} project
+								{project.category} {/*  project */}
 							</h2>
 							{/* project description */}
 							<p className="text-white/60">{project.description}</p>
@@ -131,18 +147,20 @@ const Work = () => {
 								)}
 
 								{/* github project button */}
-								<Link href={project.github} target="_blank" class="a-action">
-									<TooltipProvider delayDuration={100}>
-										<Tooltip>
-											<TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-												<BsGithub className="text-white text-3xl group-hover:text-accent" />
-											</TooltipTrigger>
-											<TooltipContent>
-												<p>Github repository</p>
-											</TooltipContent>
-										</Tooltip>
-									</TooltipProvider>
-								</Link>
+								{project.github != "" && (
+									<Link href={project.github} target="_blank">
+										<TooltipProvider delayDuration={100}>
+											<Tooltip>
+												<TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+													<BsGithub className="text-white text-3xl group-hover:text-accent" />
+												</TooltipTrigger>
+												<TooltipContent>
+													<p>Github</p>
+												</TooltipContent>
+											</Tooltip>
+										</TooltipProvider>
+									</Link>
+								)}
 							</div>
 						</div>
 					</div>
